@@ -19,3 +19,20 @@ console.log('Hello World from Webpacker')
 
 // app/javascript/packs/application.js
 import 'bootstrap';
+import { loadDynamicCardText } from '../components/card';
+
+const card = document.querySelector(".cocktail-card");
+
+console.log(card)
+
+const callback = (event) => {
+  loadDynamicCardText()
+}
+
+const callback2 = (event) => {
+  document.querySelector(".card-typed-text").innerHTML = ""
+}
+
+// card.addEventListener("mouseenter", callback)
+// card.addEventListener("mouseleave", callback2)
+loadDynamicCardText();

@@ -16,13 +16,18 @@
   transition: all .2s ease-in-out;
   max-height: 24vh;
   min-height: 24vh;
+  border-radius: 16px;
 }
 
 .cocktail-card:hover {
-  transform: scale(1.1  );
+  transform: scale(1.04  );
 }
 
 .paidetodos {
   display: grid; grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px
+}
+
+.card-typed-text {
+    display: inline;
 }

@@ -7,6 +7,8 @@
       <div class="card cocktail-card" style="">
         <div class="card-body">
           <h5 class="card-title"><%= cocktail.name %></h5>
+          <input type="hidden" id="cocktails-ingredients" value="<%= cocktail.doses %>" />
+          <p class="card-typed-text"></p>
           <ul class="card-text">
             <% cocktail.ingredients.each do |ingredient| %>
               <li><%= ingredient.name %></li>
