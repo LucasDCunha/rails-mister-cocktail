@@ -1,9 +1,20 @@
-<% @cocktails.each do |cocktail| %>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title"><%= cocktail.name %></h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text"></p>
-    </div>
-  </div>
-<% end %>
+<div style="text-align: end;">
+  <%= link_to "Add new cocktail", new_cocktail_path, class: "btn btn-warning" %>
+</div>
+<div class="paidetodos mt-4">
+  <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail), class: "text-decoration-none text-dark" do %>
+      <div class="card cocktail-card" style="">
+        <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+          <ul class="card-text">
+            <% cocktail.ingredients.each do |ingredient| %>
+              <li><%= ingredient.name %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+

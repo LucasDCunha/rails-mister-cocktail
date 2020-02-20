@@ -13,7 +13,9 @@
   <body>
     <header class="p-2 mb-4" style="background-color: #493995;">
       <nav class="nav justify-content-between align-items-center">
-        <h1 class="ml-2 text-warning">Cocktails <i class="fas fa-cocktail"></i></h1>
+        <%= link_to root_path, class: "text-decoration-none" do %>
+          <h1 class="ml-2 text-warning">Cocktails <i class="fas fa-cocktail"></i></h1>
+        <% end %>
         <div class="m-2">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search cocktail">
