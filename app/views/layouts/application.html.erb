@@ -11,7 +11,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="p-2 mb-4" style="background-color: #493995;">
+      <nav class="nav justify-content-between align-items-center">
+        <h1 class="ml-2 text-warning">Cocktails <i class="fas fa-cocktail"></i></h1>
+        <div class="m-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search cocktail">
+            <div class="input-group-append">
+              <%= link_to "Search", new_cocktail_path, class: "btn btn-warning" %>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
