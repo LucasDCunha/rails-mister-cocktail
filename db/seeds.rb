@@ -21,7 +21,10 @@ Cocktail.delete_all
 puts 'Deleted all cocktail'
 
 20.times do
-  Cocktail.create(name: Faker::Movies::LordOfTheRings.character)
+  file = URI.open('https://source.unsplash.com/random')
+  cocktail = Cocktail.new(name: Faker::Movies::LordOfTheRings.character)
+  cocktail.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+  cocktail.save!
 end
 
 puts 'Created new cocktails'
@@ -33,4 +36,5 @@ Cocktail.all.each do |cocktail|
     dose.save!
   end
 end
+
 puts 'Added doses to cocktails'
