@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <header class="p-2 mb-4" style="background-color: #493995;">
+    <header class="p-2 mb-4">
       <nav class="nav justify-content-between align-items-center">
         <%= link_to root_path, class: "text-decoration-none" do %>
           <h1 class="ml-2 text-warning">Cocktails <i class="fas fa-cocktail"></i></h1>
@@ -20,7 +20,7 @@
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search cocktail">
             <div class="input-group-append">
-              <%= link_to "Search", new_cocktail_path, class: "btn btn-warning" %>
+              <%= link_to "Search", root_path, class: "btn btn-warning" %>
             </div>
           </div>
         </div>
@@ -29,6 +29,14 @@
     <div class="container">
       <%= yield %>
     </div>
+    <footer class="p-2 mt-4">
+      <h3>Follow me!</h3>
+      <ul id="icons">
+        <%= link_to "<i class='fab fa-facebook icon-social-media'></i>".html_safe, "https://www.facebook.com/lucas.dinizcunha", target: "_blank" %>
+        <%= link_to "<i class='fab fa-instagram icon-social-media'></i>".html_safe, "https://www.instagram.com/lucasdiniz47/", target: "_blank" %>
+        <%= link_to "<i class='fab fa-github icon-social-media'></i>".html_safe, "https://www.instagram.com/lucasdiniz47/", target: "_blank" %>
+      </ul>
+    </footer>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>

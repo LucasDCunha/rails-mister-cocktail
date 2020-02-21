@@ -1,0 +1,16 @@
+<div style="text-align: center;">
+  <h2><%= @cocktail.name %></h2>
+</div>
+
+<div class="card display-ing">
+  <div class="card-body">
+    <div style="text-align: center;">
+      <h4 class="card-title">Ingredients</h4>
+    </div>
+    <ul class="card-text">
+      <% @cocktail.doses.each do |dose| %>
+        <li><%= dose.ingredient.name %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

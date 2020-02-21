@@ -4,7 +4,7 @@
 <div class="paidetodos mt-4">
   <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail), class: "text-decoration-none text-dark" do %>
-      <div class="card cocktail-card" style="">
+      <div class="card cocktail-card">
         <div class="card-body">
           <h5 class="card-title"><%= cocktail.name %></h5>
           <input type="hidden" id="cocktails-ingredients" value="<%= cocktail.doses %>" />

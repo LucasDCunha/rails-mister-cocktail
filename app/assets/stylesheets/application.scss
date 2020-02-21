@@ -19,15 +19,57 @@
   border-radius: 16px;
 }
 
+.display-ing {
+  max-height: 24vh;
+  min-height: 24vh;
+  border-radius: 16px;
+  width: 18rem;
+}
+
+
 .cocktail-card:hover {
-  transform: scale(1.04  );
+  transform: scale(1.03);
 }
 
 .paidetodos {
   display: grid; grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 32px
+  grid-gap: 32px;
 }
 
 .card-typed-text {
-    display: inline;
+  display: inline;
+}
+
+header {
+  background-color: #493995;
+  position: sticky;
+  top: 0px;
+  z-index:902;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #E67E22;
+  background-color: #493995;
+}
+
+#icons {
+  padding: 0;
+  margin: 0;
+}
+
+.icon-social-media {
+  color: #E67E22;
+  transition: all .1s ease-in-out;
+  font-size: 32px;
+  padding: 8px;
+}
+
+.icon-social-media:hover {
+  transform: scale(1.1);
+  color: rgb(210, 106, 14);
+
 }
