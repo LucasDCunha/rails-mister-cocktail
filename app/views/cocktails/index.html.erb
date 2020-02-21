@@ -11,8 +11,6 @@
     <%= link_to "Add new cocktail", new_cocktail_path, class: "btn btn-warning" %>
   </div>
 </div>
-<%#= cl_image_tag("vf1s2pfvzb60wxbvslnq",
-      width: 400, height: 300, crop: :fill) %>
 <div class="paidetodos mt-4">
   <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail), class: "text-decoration-none text-dark" do %>
@@ -33,4 +31,5 @@
     <% end %>
   <% end %>
 </div>
+
 

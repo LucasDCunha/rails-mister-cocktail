@@ -34,5 +34,5 @@ const callback2 = (event) => {
   document.querySelector(".card-typed-text").innerHTML = ""
 }
 
-card.addEventListener("mouseenter", callback)
-card.addEventListener("mouseleave", callback2)
+// card.addEventListener("mouseenter", callback)
+// card.addEventListener("mouseleave", callback2)
