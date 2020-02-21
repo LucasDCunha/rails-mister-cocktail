@@ -20,7 +20,7 @@ console.log('Hello World from Webpacker')
 // app/javascript/packs/application.js
 import 'bootstrap';
 import { loadDynamicCardText } from '../components/card';
-import { loadDynamicCardText2 } from '../components/card';
+// import { loadDynamicCardText2 } from '../components/card';
 
 const card = document.querySelector(".cocktail-card");
 

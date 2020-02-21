@@ -17,6 +17,7 @@
   max-height: 24vh;
   min-height: 24vh;
   border-radius: 16px;
+  background-size: cover;
 }
 
 .display-ing {
@@ -63,12 +64,12 @@ header {
 }
 
 footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
   text-align: center;
   color: #E67E22;
   background-color: #493995;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 #icons {
@@ -87,4 +88,12 @@ footer {
   transform: scale(1.1);
   color: rgb(210, 106, 14);
 
+}
+
+#main-container {
+  min-height: 71.5vh;
+}
+
+.cocktail-ingredients {
+  visibility: hidden
 }
