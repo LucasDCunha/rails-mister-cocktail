@@ -14,7 +14,7 @@
 <div class="paidetodos mt-4">
   <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail), class: "text-decoration-none text-dark" do %>
-      <div class="card cocktail-card" style="">
+      <div class="card cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
         <div class="card-body">
           <h4 class="card-title cocktail-title"><%= cocktail.name %></h4>
           <p class="card-typed-text"></p>
@@ -32,4 +32,6 @@
   <% end %>
 </div>
 
+<div class="card-category" >
 
+</div>
