@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6">
+    <div style="width: 400px">
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-12 col-md-6 col-lg-6">
+    <div>
+      <h4>Cocktail preview</h4>
+      <div class="card cocktail-card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Cocktail name</h5>
+          <p class="card-typed-text"></p>
+          <ul class="card-text">
+              <li>Add ingredients later!</li>
+              <li>Ingredient</li>
+              <li>Ingredient</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

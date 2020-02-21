@@ -3,10 +3,10 @@ import Typed from 'typed.js';
 const card = document.getElementById("cocktails-ingredients").value;
 
 
-const loadDynamicCardText = () => {
+const loadDynamicCardText = (text) => {
   new Typed('.card-typed-text', {
-    strings: [`${card}`],
-    typeSpeed: 15,
+    strings: [text],
+    typeSpeed: 10,
     loop: false,
     showCursor: false
   });

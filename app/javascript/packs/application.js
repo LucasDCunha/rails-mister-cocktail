@@ -26,13 +26,12 @@ const card = document.querySelector(".cocktail-card");
 console.log(card)
 
 const callback = (event) => {
-  loadDynamicCardText()
+  loadDynamicCardText("ingredients")
 }
 
 const callback2 = (event) => {
   document.querySelector(".card-typed-text").innerHTML = ""
 }
 
-// card.addEventListener("mouseenter", callback)
-// card.addEventListener("mouseleave", callback2)
-loadDynamicCardText();
+card.addEventListener("mouseenter", callback)
+card.addEventListener("mouseleave", callback2)
