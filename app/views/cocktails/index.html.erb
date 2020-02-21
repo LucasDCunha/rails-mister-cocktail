@@ -2,7 +2,7 @@
   <div class="my-2">
     <div class="input-group">
         <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-          <%= f.input :search, input_html: {value: ""}, label: false, placeholder: "Search a cocktail" %>
+          <%= f.input :search, input_html: {value: ""}, label: false, placeholder: "Search a cocktail", id: :search_bar %>
           <%= f.submit "Search", class: "btn btn-warning" %>
         <% end %>
     </div>
@@ -14,16 +14,18 @@
 <div class="paidetodos mt-4">
   <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail), class: "text-decoration-none text-dark" do %>
-      <div class="card cocktail-card">
+      <div class="card cocktail-card" style="">
         <div class="card-body">
-          <h5 class="card-title"><%= cocktail.name %></h5>
+          <h4 class="card-title cocktail-title"><%= cocktail.name %></h4>
           <input type="hidden" id="cocktails-ingredients" value="<%= cocktail.doses %>" />
           <p class="card-typed-text"></p>
-          <ul class="card-text">
-            <% cocktail.ingredients.each do |ingredient| %>
-              <li><%= ingredient.name %></li>
-            <% end %>
-          </ul>
+          <div class="ingredients-display">
+            <ul class="card-text">
+              <% cocktail.ingredients.each do |ingredient| %>
+                <li><%= ingredient.name %></li>
+              <% end %>
+            </ul>
+          </div>
         </div>
       </div>
     <% end %>
